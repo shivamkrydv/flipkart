@@ -1,0 +1,526 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* html{
+    height: 100%;
+    width: 100%;
+    
+} */
+body{
+    font-family: arial;
+    width: 100%;
+    min-height: 100vh;
+}
+/* section{
+ min-width: 100vw;
+} */
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100vw;
+}
+
+/* img{
+    max-width: 100%;
+} */
+nav.navbar{
+    width: 100%;
+    font-size: 1.2vw;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-around;
+    padding: 10px 30px;
+    font-family: "Inter", sans-serif;
+    font-size: 17px;
+    /* width: 100%; */
+    /* gap: 20px; */
+    box-shadow: 1px 1px 6px rgba(0,0,0,0.9);
+    background-color: #fff;
+    position: relative;
+}
+nav.navbar > .navpart1{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* padding: 0px 10px; */
+    justify-content: flex-end;
+    width: 100%;
+}
+.navpart1 .mainhambar{
+    display: none;
+}
+.navpart1 .mainhambar{
+    padding-left: 20px;
+}
+.navpart1 .mainlogo img{
+    width: clamp(24px,100%,100%);
+}
+.navpart1 .mainsearchbox{
+    display: flex;    
+    align-items: center;
+    /* justify-content: center; */
+    /* border: 1px solid red; */
+    padding: 5px;
+    background-color: #F0F5FF;
+    border-radius: 20px;
+    width: 70%;
+}
+/* .navpart1 .mainsearchbox .searchbox{
+    width: 100%;
+    height: 100%;
+} */
+.navpart1 .mainsearchbox button{
+    border: none;
+    background-color: transparent;
+    padding: 2px;
+}
+.mainsearchbox .searchbox input[type='text']{
+    border: none;
+    position: relative;
+    height: 40px;
+    width: 100%;
+    font-size: 1.2vw;
+    background-color: transparent;
+}
+.mainsearchbox .searchbox input[type='text']:focus{
+    border: none;
+    outline: none;
+}
+
+.navpart1 .mainsearchbox .mainsearchbox{
+    border: 2px solid red;
+    border-radius: 20px;
+    
+}
+
+nav.navbar > .navpart2{
+    display: flex;
+    padding: 0px 10px;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+/* .navbarpart2 .login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 220px;
+} */
+.mobicon{
+    display: none;
+}
+.navpart2 .login{
+    padding: 10px;
+    border-radius: 20px;
+    &:hover{
+        background-color: blue;
+        color: white;
+    }
+}
+.login:hover{
+    color: white;
+}
+.navpart2 .login a svg{
+    transition: fill 0.3s ease, stroke 0.3s ease;
+}
+.login:hover a svg{
+    fill: transparent;
+    stroke: rgb(0, 0, 0);
+
+}
+.login a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    &:hover{
+        .darrow{
+            transition: 0.5s ease-in;
+            rotate: 180deg;
+            /* color: white; */
+        }
+    }
+}
+.login{
+    position: relative;
+}
+.login a{
+    gap: 5px;
+    color: black;
+}
+.login:hover a{
+    color: white;
+}
+.login:hover .logindropdown{
+    display: flex;
+}
+.login .logindropdown{
+    display: none;
+    position: absolute;
+    width: 200px;
+    top: 45px;
+    /* left: 0; */
+    list-style: none;
+    color: black;
+    flex-direction: column;
+    z-index: 10;
+    /* background-color: #90ee90; */
+    border-radius: 0px 20px 0px 20px;
+    overflow: hidden;
+    box-shadow: 0px 1px 6px 0px;
+}
+.logindropdown .logindropdown-item{
+    /* padding: 10px; */
+    display: flex;
+    font-size: 1.1vw;
+    height: 40px;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10px;
+    background-color: white;
+
+}
+.logindropdown .logindropdown-item:nth-child(1){
+    justify-content: space-around;    
+    padding: 0px;
+    a{
+        color: blue;
+        font-weight: 700;
+
+    }
+}
+.logindropdown .logindropdown-item:hover{
+    background-color: #F0F5FF;
+}
+.cart a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.cart a span{
+    color: black;
+    &:hover{
+        color: blue;
+    }
+}
+.Becomeseller a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.Becomeseller a span{
+    color: black;
+    &:hover{
+        color: blue;
+    }
+}
+.moreoption{
+    position: relative;
+}
+.moreoption .moreoptiondropdown{
+    display: none;
+    cursor: pointer;
+    width: 150px;
+    flex-direction: column;
+    position: absolute;
+    z-index: 10;
+    /* background-color: #90ee90; */
+    background-color: #fff;   
+    list-style: none;
+    left: -80px;
+    border-radius: 0px 20px 0px 20px;
+    overflow: hidden;
+    margin-right: 10px;
+    box-shadow: 0px 1px 10px 0px;
+}
+.moreoption:hover .moreoptiondropdown{
+    display: flex;
+    /* height: 100%; */
+}
+.moreoptiondropdown a{
+    padding: 10px;
+    width: 100%;
+}
+.moreoptiondropdown a:hover{
+    /* background-color: #baeeba;    */
+    background-color: #F0F5FF;
+
+}
+.mdropdown-items{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+.mdropdown-items a{
+    color: black;
+    text-decoration: none;
+}
+/* for second nav style */
+.secondnav{
+    display: flex;
+    min-width: 100vw;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.secondnavformob .locationbox{
+    display: flex;
+}
+.secondnavformob .mainsearchbox2{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    justify-content: center;
+    background-color: #f0f5ff;
+    border-radius: 20px;
+    /* width: 100%; */
+}
+.mainsearchbox2 .searchbox{
+    /* width: 100%;     */
+    height: 100%;
+}
+.mainsearchbox2 button{
+    background: transparent;
+    border: none;
+}
+.mainsearchbox2 .searchbox input[type='text']{
+    border: none;
+    position: relative;
+    height: 40px;
+    width: 100%;
+    background: transparent;
+}
+.mainsearchbox2 .searchbox input[type='text']:focus{
+    border: none;
+    outline: none;
+}
+.mobsidebar{
+    display: none;
+    z-index: 10;
+    position: fixed;
+    height: 100%;
+    /* width: 100%; */
+    background: #ecedef;
+    /* filter: blur(1px); */
+    top: 0px;
+    left: 0px;
+}
+.mobsidebaritem{
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
+    /* padding: 10px 20px; */
+}
+.mobsidebaritem .mobitems{
+    padding: 10px;
+    /* height: 40px; */
+    display: flex;
+}
+.mobsidebaritem .mobitems:hover{
+    background-color: #F0F5FF;
+}
+/* this is for side bar cross */
+.hidesidebar{
+    padding: 10px;
+    display: flex;
+}
+.hidesidebar .crossmobsidebar{
+    background-color: gainsboro;
+    border: 2px solid indianred;
+    padding: 10px;
+
+
+}
+.secondnavformob{
+    display: none;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+main{
+    background-color: #d1d8e1;
+    /* margin: 10px 15px; */
+    min-width: 100%;
+    height: 100%;
+}
+/* category section start here */
+.categories2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.categories{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* gap: 10px; */
+    min-height: 90px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin: 6px 6px;
+    background-color: #ffff;
+    width: 100%;
+}
+.categories .category{
+    /* width: 100%; */
+    /* max-width: 100%; */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cfashion{
+    position: relative;
+}
+.cfashion .fashiondropdown{
+    position: absolute;
+    top: 100px;
+    /* left: 0; */
+    z-index: 10;
+    display: flex;
+}
+
+.btn-category{
+    /* display: flex; */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 10px;
+    .btncategoryshow{
+        background-color: yellow;
+        border-radius: 20px 0px 0px 20px;
+        border: none;
+        padding: 10px;
+        position: relative;
+        font-size: 20px;
+        z-index: -1;
+        &::after{
+            content: ' :';
+            position: absolute;
+            top: -37px;
+            left: 125px;
+            padding: 10px;
+            font-size: 20px;
+            color: black;
+            background-color: red;
+            rotate: 11deg;
+            height: 100px;
+            line-height: 30px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            transform: translateX(-50%);
+            transition: background-color 0.3s ease,opacity 0.3 ease;
+            pointer-events: none;
+        }
+    }
+}
+.btncategoryshow:hover::after{
+    background-color: yellow;
+    opacity: 1;
+}
+.pagination{
+    max-width: 100%;
+    /* display: none; */
+}
+.pagination1 img{
+    width: 100%;
+}
+.pagination2 img{
+    width: 100%;
+}
+.pagination3 img{
+    width: 100%;
+}
+.pagination4 img{
+    width: 100%;
+}
+
+@media (max-width:1198px) {
+    .categories{
+        overflow-x: scroll;
+    }
+    .cart a>span{
+        display: none;
+    }
+    .Becomeseller a>span{
+        display: none;
+    }
+    /* section categories */
+    /* .categories{
+        display: none;
+    } */
+    .btn-category{
+        display: flex;
+    }
+}
+@media (max-width:768px){
+    .login a>img{
+        display: none;
+    }
+    .Becomeseller{
+        display: none;
+    }
+    .moreoption{
+        display: none;
+    }
+    .navpart1 .mainsearchbox{
+        display: none;
+    }
+    .navpart1 .mainhambar{
+        display: flex;
+    }
+    nav.navbar{
+        padding: 10px;
+    }
+    .mobicon{
+        display: flex;
+    }
+    .secondnavformob{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .mobsidebar{
+        width: 60%;
+    }
+}
+@media (max-width:400px){
+    main{
+        padding: 0px;
+    }
+    nav.navbar > .navpart2{
+        gap: 0px;
+    }
+    nav.navbar{
+        padding: 10px 0px;
+    }
+    nav.navbar > .navpart1{
+        gap: 0px;
+    }
+    .categories2{
+        width: 100%;
+        /* end by this width comment */
+    }
+    .mobsidebar{
+        /* display: flex; */
+        width: 100%;
+    }
+}
