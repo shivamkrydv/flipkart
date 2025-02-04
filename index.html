@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping Site For Mobile</title>
+    <link rel="icon" href="./title side.png">
+    <link rel="stylesheet" href="./style.css">
+    <!-- bootstrap cdn css-->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"> -->
+    <!-- remix icon  -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navpart1">
+                <!-- hamburger -->
+                <div class="mainhambar"><a href="#"><i class="ri-menu-2-fill"></i></a></div>
+                <div class="mainlogo">
+                    <a href="./index.html">
+                        <img src="./logoreal.svg" alt="logo" width="100%">
+                    </a>
+                </div>
+                <div class="mainsearchbox">
+                    <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                            height="24" fill="grey">
+                            <path
+                                d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z">
+                            </path>
+                        </svg>
+                    </button>
+                    <div class="searchbox"><input type="text" placeholder="Search for Products, Brands and More"
+                            size="48">
+                    </div>
+                </div>
+            </div>
+            <div class="navpart2">
+                <div class="mobicon">
+                    <a href=""><img src="./mob for icon.svg" alt="mob for icon" width="24px" height="24px"></a>
+                </div>
+                <div class="login">
+                    <a href="#">
+                        <!-- <img src="./profile.svg" alt="profile"> -->
+                        <i class="ri-account-circle-line"></i>
+
+                        <span>Login</span><i class="ri-arrow-down-s-line darrow"></i>
+                    </a>
+                    <ul class="logindropdown">
+                        <li class="logindropdown-item"><span>New Coustomer?</span> <a href="#">Sign up</a></li>
+                        <hr>
+                        <li class="logindropdown-item"><i class="ri-account-circle-line"></i>My profile</li>
+                        <li class="logindropdown-item"><i class="ri-add-circle-fill"></i>Flipkart Plus Zone</li>
+                        <li class="logindropdown-item"><i class="ri-box-3-line"></i>Orders</li>
+                        <li class="logindropdown-item"><i class="ri-heart-line"></i>Wishlist</li>
+                        <li class="logindropdown-item"><i class="ri-gift-line"></i>Rewards</li>
+                        <li class="logindropdown-item"><i class="ri-info-card-line"></i>Gift Card</li>
+                    </ul>
+                </div>
+                <div class="cart">
+                    <a href="#"><i class="ri-shopping-cart-2-fill"></i><span>Cart</span></a>
+                </div>
+                <div class="Becomeseller">
+                    <a href=""><img src="./become A seller.svg" alt="Become_a_seller"><span>Become a
+                            seller</span></a>
+                </div>
+                <div class="moreoption">
+                    <a href="#">
+                        <img src="./moreoption.svg" alt="More_option">
+                    </a>
+                    <ul class="moreoptiondropdown">
+                        <li class="mdropdown-items">
+                            <a href="#">Customer 24x7</a>
+                        </li>
+                        <li class="mdropdown-items">
+                            <a href="#">Need help!</a>
+                        </li>
+                        <li class="mdropdown-items">
+                            <a href="#">Complain</a>
+                        </li>
+                        <li class="mdropdown-items">
+                            <a href="#">Other's</a>
+                        </li>
+                    </ul>
+                </div>
+        </nav>
+        <div class="mobsidebar">
+            <div class="mobsidebaritem">
+                <div class="hidesidebar">
+                    <span class="crossmobsidebar"><i class="ri-close-line"></i></span>
+                </div>
+                <div class="mobitems">Login & Sign Up</div>
+                <div class="mobitems">SuperCoin Zone</div>
+                <div class="mobitems">Flipkart Plus Zone</div>
+                <hr>
+                <div class="mobitems">All Categories</div>
+                <div class="mobitems">More on Flipkart</div>
+                <hr>
+                <div class="mobitems">Choose Language</div>
+                <div class="mobitems">Offer Zone</div>
+                <div class="mobitems">Sell on flipkart</div>
+                <hr>
+                <div class="mobitems">My Order</div>
+                <div class="mobitems">Coupons</div>
+                <div class="mobitems">My Cart</div>
+                <div class="mobitems">My Wishlist</div>
+                <div class="mobitems">My Account</div>
+                <div class="mobitems">My Notification</div>
+                <hr>
+                <div class="mobitems">Notification Prefrences</div>
+                <div class="mobitems">Help Center</div>
+                <div class="mobitems">Legal</div>
+            </div>
+        </div>
+        <div class="secondnavformob">
+            <div class="locationbox">
+                <span class="locationicon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16"
+                        height="16" fill="currentColor">
+                        <path
+                            d="M18.364 17.364L12 23.7279L5.63604 17.364C2.12132 13.8492 2.12132 8.15076 5.63604 4.63604C9.15076 1.12132 14.8492 1.12132 18.364 4.63604C21.8787 8.15076 21.8787 13.8492 18.364 17.364ZM12 13C13.1046 13 14 12.1046 14 11C14 9.89543 13.1046 9 12 9C10.8954 9 10 9.89543 10 11C10 12.1046 10.8954 13 12 13Z">
+                        </path>
+                    </svg></span>
+                <span class="locationpincode">560067</span>
+                <span class="setdeliverylocation">Select delivery location</span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                        fill="rgba(111,151,224,1)">
+                        <path
+                            d="M15.6315 12L10.8838 3.03212L9.11622 3.9679L13.3685 12L9.11622 20.0321L10.8838 20.9679L15.6315 12Z">
+                        </path>
+                    </svg></span>
+            </div>
+            <div class="mainsearchbox2">
+                <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                        fill="grey">
+                        <path
+                            d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z">
+                        </path>
+                    </svg>
+                </button>
+                <div class="searchbox"><input type="text" placeholder="Search for Products" size="38">
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- section categories start items -->
+        <section>
+            <!-- <div class="btn-category">
+                            <button class="btncategoryshow">Categories</button>
+                    </div> -->
+            <div class="categories2">
+                <div class="categories">
+                    <div class="category cgrocery">
+                        <a href="topoffer.html">
+                            <img src="./category 1 topoffer.jpg" alt="Grocery">
+                            <h5>Top offer</h5>
+                        </a>
+                    </div>
+                    <div class="category cmobile">
+                        <a href="#">
+                            <img src="./category 2 mobile.jpg" alt="">
+                            <h5>Mobile & Tablets</h5>
+                        </a>
+                    </div>
+                    <div class="category cfashion">
+                        <a href="#">
+                            <img src="./category 3 tv appliences.webp" alt="">
+                            <h5>TVs & Appliences</h5>
+                        </a>
+                    </div>
+                    <div class="category celectronics">
+                        <a href="#">
+                            <img src="./category 4 electronics.webp" alt="">
+                            <h5>Electronics</h5>
+                        </a>
+                    </div>
+                    <div class="category">
+                        <a href="#">
+                            <img src="./category 5 fashion.webp" alt="">
+                            <h5>Fashion</h5>
+                        </a>
+                    </div>
+                    <div class="category capplinces">
+                        <a href="#">
+                            <img src="./category 6 beauty food.webp" alt="">
+                            <h5>Beauty,Food..</h5>
+                        </a>
+                    </div>
+                    <div class="category cflight">
+                        <a href="#">
+                            <img src="./category 7 home kitchen.webp" alt="">
+                            <h5>Home, Kitchen</h5>
+                        </a>
+                    </div>
+                    <div class="category cbeautytoys">
+                        <a href="#">
+                            <img src="./category 8 furniture.webp" alt="">
+                            <h5>Furniture</h5>
+                        </a>
+                    </div>
+                    <div class="category cvehicles">
+                        <a href="#">
+                            <img src="./category 9 travel.webp" alt="">
+                            <h5>Travel</h5>
+                        </a>
+                    </div>
+                    <div class="category cvehicles">
+                        <a href="#">
+                            <img src="./category 10 grocery.webp" alt="">
+                            <h5>Grocery</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section categories item end -->
+        <!-- section pagination -->
+        <section>
+            <div class="frame">
+                <div class="pagination">
+                    <img src="./pagination5.jpg" class="slide" alt="">
+                    <img src="./pagination6.jpg" class="slide" alt="">
+                    <img src="./pagination1.jpg" class="slide" alt="">
+                    <img src="./pagination2.jpg" class="slide" alt="">
+                    <img src="./pagination3.jpg" class="slide" alt="">
+                    <img src="./pagination4.jpg" class="slide" alt="">
+                </div>
+                <div class="prevnextbtn">
+                    <button class="prev"></button>
+                    <button class="next"></button>
+                </div>
+            </div>
+            <div class="pageslidedash">
+                <div class="slidedashedbox">
+                    <div class="dashedover"></div>
+                    <div class="slidedashed"></div>
+                    <div class="slidedashed"></div>
+                    <div class="slidedashed"></div>
+                    <div class="slidedashed"></div>
+                    <div class="slidedashed"></div>
+                    <div class="slidedashed"></div>
+                </div>
+            </div>
+        </section>
+        <!-- end pagination -->
+        <!-- start best of electronics -->
+        <section>
+            <div class="bestelectronics">
+                <div class="best-electronics-part1">
+                    <div class="title-bestelectronics">Best of Electronics</div>
+                    <div class="B-electronics-items">
+                        <div class="electronics-item"><a href="#"><img src="./1 best-electronics.jpeg" alt="">
+                                <p>Best Truewireless</p>
+                            </a></div>
+                        <div class="electronics-item"><a href="#"><img src="./2 best-electronics.jpeg" alt="">
+                                <p>projector</p>
+                            </a></div>
+                        <!-- <div class="electronics-item"><a href="#"><img src="./3 best-electronics.jpeg" alt="">
+                    <p>speaker</p>
+                    </a></div> -->
+                        <div class="electronics-item"><a href="#"><img src="./4 best-electronics.jpeg" alt="">
+                                <p>fastrack smartwatch</p>
+                            </a></div>
+                        <div class="electronics-item"><a href="#"><img src="./4 best-electronics.jpeg" alt="">
+                                <p>fastrack smartwatch</p>
+                            </a></div>
+                        <div class="electronics-item"><a href="#"><img src="./5 best-electronics.jpeg" alt="">
+                                <p>Boat smartwatches</p>
+                            </a></div>
+                        <div class="electronics-item"><a href="#"><img src="./6 best-electronics.jpeg" alt="">
+                                <p>top mirrorless</p>
+                            </a></div>
+                        <div class="electronics-item"><a href="#"><img src="./7 best-electronics.jpeg" alt="">
+                                <p>Noise smartwatch</p>
+                            </a></div>
+                        <div class="electronics-item"><a href="#"><img src="./8 best-electronics.jpeg" alt="">
+                                <p>printers</p>
+                            </a></div>
+                    </div>
+                    <div class="prevnextelectronics">
+                        <button class="prevelectronics"></button>
+                        <button class="nextelectronics"></button>
+                    </div>
+                </div>
+                <div class="best-electronics-part2">
+                    <div class="ownerweb">
+                        <img src="./owner.jpg" alt="" width="100%">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- end best of electronics -->
+
+        <!-- start beauty food toys -->
+        <section>
+            <div class="beautyfoodcontainer">
+                <div class="beautyfood">
+                    <div class="beautyfoodtop">
+                        <p>Beauty, Food ,Toys & more</p><img src="rArrow.png" class="rArrow" alt="">
+                    </div>
+                    <div class="frame">
+                        <div class="beautyfoodend">
+                            <div class="beautyfoodend-item">
+                                <a href="#"><img src="./1 beautyfood.jpeg" alt="">
+                                    <p>Rough pad</p>
+                                </a>
+                            </div>
+                            <div class="beautyfoodend-item">
+                                <a href="#"><img src="./2 beautyfood.jpeg" alt="">
+                                    <p>Rubic cube's</p>
+                                </a>
+                            </div>
+                            <div class="beautyfoodend-item">
+                                <a href="#"><img src="./3 beautyfood.jpeg" alt="">
+                                    <p>Kid's light</p>
+                                </a>
+                            </div>
+                            <div class="beautyfoodend-item">
+                                <a href="#"><img src="./7 beautyfood.jpeg" alt="">
+                                    <p>Face mask</p>
+                                </a>
+                            </div>
+                            <div class="beautyfoodend-item">
+                                <a href="#"><img src="./5 beautyfood.jpeg" alt="">
+                                    <p>comb</p>
+                                </a>
+                            </div>
+                            <div class="beautyfoodend-item">
+                                <a href="#"><img src="./6 beautyfood.jpeg" alt="">
+                                    <p>Sampoo</p>
+                                </a>
+                            </div>
+                            <div class="beautyfoodend-lasti">
+                                <img src="./lArrow.png" alt="">
+                                <p>Go back</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end beauty food toys-->
+        <!-- start beauty food toys -->
+        <section>
+            <div class="beautyfoodcontainer">
+                <div class="beautyfood">
+                    <div class="beautyfoodtop">
+                        <p>Best Deals in Smartphones</p><img src="rArrow.png" class="rArrow" alt="">
+                    </div>
+                    <div class="frame">
+                        <div class="beautyfoodend">
+                            <div class="beautyfoodend-item">
+                                <a href="#"><img src="./1 bestdeals in sp.jpeg" alt="">
+                                    <p>moto g35 5G <br><span> from ₹9,999</span></p>
+                                </a>
+                            </div>
+                            <div class="beautyfoodend-item">
+                                <a href="#"><img src="./2 bestdeals in sp.jpeg" alt="">
+                                    <p>nothing Phone 2a <br> <span>from ₹21,999</span></p>
+                                </a>
+                            </div>
+                            <div class="beautyfoodend-item">
+                                <a href="#"><img src="./3 bestdeals in sp.jpeg" alt="">
+                                    <p>Moto Edge 50 Fusion <br> <span>From ₹20,999</span>*</p>
+                                </a>
+                            </div>
+                            <div class="beautyfoodend-item">
+                                <a href="#"><img src="./4 bestdeals in sp.jpeg" alt="">
+                                    <p>Poco m7 pro 5G <br><span> From ₹13,999</span></p>
+                                </a>
+                            </div>
+                            <div class="beautyfoodend-item">
+                                <a href="#"><img src="./5 bestdeals in sp.jpeg" alt="">
+                                    <p>Redmi Note 14 Pro Plus 5G <br> <span>Just ₹29,999</span></p>
+                                </a>
+                            </div>
+                            <div class="beautyfoodend-item">
+                                <a href="#"><img src="./6 bestdeals in sp.jpeg" alt="">
+                                    <p>Samsung S23 <br> <span>Form ₹49,999</span></p>
+                                </a>
+                            </div>
+                            <div class="beautyfoodend-item">
+                                <a href="#"><img src="./7 bestdeals in sp.jpeg" alt="">
+                                    <p>moto G64 5G <br><span>Just ₹12,999</span></p>
+                                </a>
+                            </div>
+                            <div class="beautyfoodend-item">
+                                <a href="#"><img src="./8 bestdeals in sp.jpeg" alt="">
+                                    <p>Realme p1 5G <br><span> From ₹13,999</span></p>
+                                </a>
+                            </div>
+                            <div class="beautyfoodend-lasti">
+                                <img src="./lArrow.png" alt="">
+                                <p>Go back</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end beauty food toys-->
+        <!-- last grid items start -->
+        <section>
+            <div class="lastgridcontainer">
+                <div class="griditems">
+                    <div class="griditem"><a href="#"><img src="./1 grid items.jpg" alt=""></a></div>
+                    <div class="griditem"><a href="#"><img src="./2 grid items.jpg" alt=""></a></div>
+                    <div class="griditem"><a href="#"><img src="./3 grid items.jpg" alt=""></a></div>
+                    <div class="griditem"><a href="#"><img src="./4 grid items.jpg" alt=""></a></div>
+                    <div class="griditem"><a href="#"><img src="./5 grid items.jpg" alt=""></a></div>
+                    <div class="griditem"><a href="#"><img src="./6 grid items.jpg" alt=""></a></div>
+                </div>
+            </div>
+        </section>
+        <!-- last grid items end-->
+    </main>
+    <!-- main end  -->
+     <!-- footer start -->
+    <footer>
+        <div class="footercontainer">
+            <div class="footer1">
+                    <div class="footer1-item"><H4>ABOUT</H4>
+                        <a href="#">Contact us</a>
+                        <a href="#">About us</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Flipkart Stories</a>
+                        <a href="#">Press</a>
+                        <a href="#">Corporate Information</a>
+                    </div>
+                    <div class="footer1-item"><H4>GROUP COMPANIES </H4>
+                        <a href="#">Myntra</a>
+                        <a href="#">Cleartrip</a>
+                        <a href="#">Shopsy</a>
+                    </div>
+                    <div class="footer1-item"><H4>HELP</H4>
+                        <a href="#">Payments</a>
+                        <a href="#">Shipping</a>
+                        <a href="#">Cancellation & Returns</a>
+                        <a href="#">FAQ</a>
+                    </div>
+                    <div class="footer1-item"><H4>CONSUMER POLICY</H4>
+                        <a href="">Cancellation & Returns</a>
+                        <a href="">Terms of use</a>
+                        <a href="">Security</a>
+                        <a href="">Privacy</a>
+                        <a href="">Sitemap</a>
+                        <a href="">Greivance Redressal</a>
+                        <a href="">EPR Compliance</a>
+                    </div>
+                    <div class="footer1-item">
+                        <div>
+                            <h4>Mail Us:</h4>
+                            <p>Flipkart Internet Private Limited,</p>
+                            <p>Buildings Alyssa, Begonia &</p>
+                            <p>Clove Embassy Tech Village,</p>
+                            <p>Outer Ring Road, Devarabeesanahalli Village,</p>
+                            <p>Bengaluru, 560103</p>
+                            <p>Karnataka, india</p>
+                        </div>
+                        <div>
+                            <h4>Social</h4>
+                            <div class="social-icons">
+                                <i class="ri-facebook-circle-line"></i>
+                                <i class="ri-twitter-x-line"></i>
+                                <i class="ri-youtube-line"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer1-item">
+                        <h4>Registered Office Address:</h4>
+                        <p>Flipkart Internet Private Limited,</p>
+                        <p>Buildings Alyssa, Begonia &</p>
+                        <p>Clove Embassy Tech Village,</p>
+                        <p>Outer Ring Road, Devarabeesanahalli Village,</p>
+                        <p>Bengaluru, 560103</p>
+                        <p>Karnataka, india</p>
+                        <p> CIN : U51109KA2012PTC066107 </p>
+                        <p>Telephone : 
+                            <a href="tel:044-45614700">044-45614700</a>,
+                            <a href="tel:044-67415800">044-67415800</a>
+                        </p>
+
+                    </div>
+            </div>
+            <div class="footer2">
+                <div class="footer2-item"><i class="ri-store-3-line"></i> Become a Seller</div>
+                <div class="footer2-item"><i class="ri-advertisement-line"></i> Advertise</div>
+                <div class="footer2-item"><i class="ri-gift-2-line"></i> Gift cards</div>
+                <div class="footer2-item"><i class="ri-questionnaire-line"></i> Help Center</div>
+                <div class="footer2-item">&copy; 2007-2025 flipkart.com</div>
+                <div class="footer2-item">
+                    <img src="./payment card type.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- <script src="./jquery-3.7.1.min.js"></script> -->
+    <script src="script.js"></script>
+</body>
+
+</html>
