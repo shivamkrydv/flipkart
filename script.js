@@ -55,13 +55,13 @@ let dashedover = document.querySelector(".dashedover");
 let dashedleft = 17;
 
 const prevSlide = () => {
-    dashedover.style.left = `${(slideNumber-2) * dashedleft}px`;
+    dashedover.style.left = `${(slideNumber - 2) * dashedleft}px`;
     pagination.style.transform = `translateX(-${(slideNumber - 2) * 100}%)`;
     slideNumber--;
 }
 
 const getlastslide = () => {
-    dashedover.style.left = `${(len-1) * dashedleft}px`;
+    dashedover.style.left = `${(len - 1) * dashedleft}px`;
     pagination.style.transform = `translateX(-${(len - 1) * 100}%)`;
     slideNumber = len;
 }
@@ -116,17 +116,18 @@ let belectronicsItem = document.querySelector(".B-electronics-items");
 let prevelectronics = document.querySelector(".prevelectronics")
 let nextelectronics = document.querySelector(".nextelectronics")
 
+let X = 0;
 
 const prevelectronicsfunc = () => {
     if (X > 6) {
-        belectronicsItem.style.transform = `translateX(-400px)`
-        X = 4;
+        belectronicsItem.style.transform = `translateX(-450px)`
+        X = 3;
         nextelectronics.style.display = `flex`;
     }
     else {
         belectronicsItem.style.transform = `translateX(0px)`
         nextelectronics.style.display = `flex`;
-        X = 2;
+        X = 1;
         prevelectronics.style.display = `none`;
         prevnextelectronics.style.justifyContent = "flex-end";
 
@@ -134,27 +135,22 @@ const prevelectronicsfunc = () => {
 }
 prevelectronics.addEventListener('click', prevelectronicsfunc);
 
-let X = 1;
 
 const nextelectronicsfunc = () => {
     if (X < 10) {
-        if (X >= 2) {
-            prevelectronics.style.display = `flex`;
-            prevnextelectronics.style.justifyContent = `space-between`
-
-        }
+        prevelectronics.style.display = `flex`;
+        prevnextelectronics.style.justifyContent = `space-between`
         belectronicsItem.style.transform = `translateX(-${X * 150}px)`;
-        X += 1;
+        X++;
     }
     else {
+        belectronicsItem.style.transform = `translateX(0px)`;
         nextelectronics.style.display = `flex`;
-        setTimeout(belectronicsItem.style.transform = `translateX(0px)`, 2000);
-        X = 1;
+        X = 0;
     }
     setTimeout(nextelectronicsfunc, 4000);
 };
-
-setTimeout(nextelectronicsfunc, 4000);
+nextelectronicsfunc();
 
 nextelectronics.addEventListener('click', nextelectronicsfunc);
 
@@ -169,49 +165,49 @@ let beautyfoodendLasti = document.querySelectorAll(".beautyfoodend-lasti");
 let moving = 1;
 
 rArrow[0].addEventListener('click', () => {
-    if(moving<10){
-        beautyfoodend[0].style.transform = `translate(-${moving*200}px)`;
+    if (moving < 10) {
+        beautyfoodend[0].style.transform = `translate(-${moving * 200}px)`;
         moving++;
         console.log("arrow 2");
     }
-    else{
+    else {
         beautyfoodend[0].style.transform = `translate(0px)`;
-        moving = 1;        
+        moving = 1;
 
     }
 })
 rArrow[0].addEventListener('dblclick', () => {
-        beautyfoodend[0].style.transform = `translate(0px)`;
-        moving = 1;
+    beautyfoodend[0].style.transform = `translate(0px)`;
+    moving = 1;
 })
 
 beautyfoodendLasti[0].addEventListener('click', () => {
-        beautyfoodend[0].style.transform = `translate(0px)`;
-        moving = 1;
+    beautyfoodend[0].style.transform = `translate(0px)`;
+    moving = 1;
 })
 rArrow[1].addEventListener('dblclick', () => {
-        beautyfoodend[1].style.transform = `translate(0px)`;
-        moving = 1;
+    beautyfoodend[1].style.transform = `translate(0px)`;
+    moving = 1;
 })
 rArrow[1].addEventListener('click', () => {
-    if(moving<10){
-        beautyfoodend[1].style.transform = `translate(-${moving*200}px)`;
+    if (moving < 10) {
+        beautyfoodend[1].style.transform = `translate(-${moving * 200}px)`;
         moving++;
         // console.log("arrow 2");
     }
-    else{
+    else {
         beautyfoodend[1].style.transform = `translate(0px)`;
-        moving = 1;        
+        moving = 1;
 
     }
 })
 
 rArrow[1].addEventListener('dblclick', () => {
-        beautyfoodend[1].style.transform = `translate(0px)`;
-        moving = 1;
+    beautyfoodend[1].style.transform = `translate(0px)`;
+    moving = 1;
 })
 
 beautyfoodendLasti[1].addEventListener('click', () => {
-        beautyfoodend[1].style.transform = `translate(0px)`;
-        moving = 1;
+    beautyfoodend[1].style.transform = `translate(0px)`;
+    moving = 1;
 })
