@@ -833,7 +833,6 @@ button:hover{
     }
 }
 @media (max-width:768px){
-    
     .pagination .slide{
         object-position: center;
     }
@@ -921,6 +920,9 @@ button:hover{
     }
     .footer1 .footer1-item{
         margin-top: 20px;
+    }
+    .footer1 .footer1-item:nth-child(5) {
+        padding: 0px;
     }
 }
 
